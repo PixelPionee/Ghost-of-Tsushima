@@ -1,7 +1,3 @@
-// ============================================
-// TIPOS MINIMALISTAS - FOCO EM INTERATIVIDADE
-// ============================================
-
 export interface CursorEffect {
   particleSpeed: 'slow' | 'medium' | 'fast' | 'variable';
   particleSize: 'small' | 'medium' | 'large';
@@ -66,10 +62,6 @@ export interface TsushimaData {
   themes: Themes;
 }
 
-// ============================================
-// TIPOS PARA SISTEMA DE PARTÍCULAS
-// ============================================
-
 export interface Particle {
   x: number;
   y: number;
@@ -91,10 +83,6 @@ export interface MousePosition {
   prevX: number;
   prevY: number;
 }
-
-// ============================================
-// TIPOS PARA CONTEXTO DE SEÇÃO
-// ============================================
 
 export type SectionContext = 
   | 'default'

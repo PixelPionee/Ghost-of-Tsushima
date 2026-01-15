@@ -1,8 +1,3 @@
-/* ========================================
-   KEYFRAMES - Animações Base
-   ======================================== */
-
-/* Fade In/Out */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -21,7 +16,6 @@
   }
 }
 
-/* Slide Animations */
 @keyframes slideInUp {
   from {
     transform: translateY(100%);
@@ -66,7 +60,6 @@
   }
 }
 
-/* Scale Animations */
 @keyframes scaleIn {
   from {
     transform: scale(0);
@@ -89,7 +82,6 @@
   }
 }
 
-/* Rotate Animations */
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -108,11 +100,6 @@
   }
 }
 
-/* ========================================
-   ANIMAÇÕES TEMÁTICAS - Ghost of Tsushima
-   ======================================== */
-
-/* Queda de Pétalas */
 @keyframes petalFall {
   0% {
     transform: translateY(-10px) translateX(0) rotate(0deg);
@@ -128,7 +115,6 @@
   }
 }
 
-/* Flutuação de Folhas */
 @keyframes leafFloat {
   0% {
     transform: translateY(0) translateX(0) rotate(0deg);
@@ -147,7 +133,6 @@
   }
 }
 
-/* Efeito de Tinta se Espalhando */
 @keyframes inkSpread {
   0% {
     transform: scale(0);
@@ -162,7 +147,6 @@
   }
 }
 
-/* Traço de Pincel */
 @keyframes brushStroke {
   0% {
     stroke-dashoffset: 1000;
@@ -177,7 +161,6 @@
   }
 }
 
-/* Desenrolar de Pergaminho */
 @keyframes scrollUnroll {
   0% {
     transform: scaleY(0);
@@ -191,7 +174,6 @@
   }
 }
 
-/* Rajada de Vento */
 @keyframes windGust {
   0% {
     transform: translateX(-100%) scale(0.5);
@@ -206,7 +188,6 @@
   }
 }
 
-/* Brilho Dourado */
 @keyframes goldShimmer {
   0% {
     background-position: -200% center;
@@ -216,7 +197,6 @@
   }
 }
 
-/* Pulso Vermelho */
 @keyframes redPulse {
   0%, 100% {
     box-shadow: 0 0 0 0 rgba(220, 20, 60, 0.7);
@@ -226,7 +206,6 @@
   }
 }
 
-/* Tremor */
 @keyframes shake {
   0%, 100% {
     transform: translateX(0);
@@ -239,7 +218,6 @@
   }
 }
 
-/* Ondulação */
 @keyframes ripple {
   0% {
     transform: scale(0);
@@ -251,7 +229,6 @@
   }
 }
 
-/* Aparição Fantasma */
 @keyframes ghostAppear {
   0% {
     opacity: 0;
@@ -265,7 +242,6 @@
   }
 }
 
-/* Desaparição Fantasma */
 @keyframes ghostDisappear {
   0% {
     opacity: 1;
@@ -279,7 +255,6 @@
   }
 }
 
-/* Dispersão de Partículas */
 @keyframes particleDisperse {
   0% {
     transform: translate(0, 0) scale(1);
@@ -291,7 +266,6 @@
   }
 }
 
-/* Formação de Partículas */
 @keyframes particleForm {
   0% {
     transform: translate(var(--tx, 0), var(--ty, 0)) scale(0);
@@ -303,11 +277,6 @@
   }
 }
 
-/* ========================================
-   CLASSES DE ANIMAÇÃO
-   ======================================== */
-
-/* Fade */
 .animate-fade-in {
   animation: fadeIn var(--duration-normal) var(--ease-out) forwards;
 }
@@ -316,7 +285,6 @@
   animation: fadeOut var(--duration-normal) var(--ease-in) forwards;
 }
 
-/* Slide */
 .animate-slide-in-up {
   animation: slideInUp var(--duration-slow) var(--ease-out) forwards;
 }
@@ -333,7 +301,6 @@
   animation: slideInRight var(--duration-slow) var(--ease-out) forwards;
 }
 
-/* Scale */
 .animate-scale-in {
   animation: scaleIn var(--duration-normal) var(--ease-bounce) forwards;
 }
@@ -342,7 +309,6 @@
   animation: scaleOut var(--duration-normal) var(--ease-in) forwards;
 }
 
-/* Spin */
 .animate-spin {
   animation: spin 1s linear infinite;
 }
@@ -351,7 +317,6 @@
   animation: spinSlow 3s linear infinite;
 }
 
-/* Temáticas */
 .animate-petal-fall {
   animation: petalFall var(--petal-fall-duration) var(--ease-wind) forwards;
 }
@@ -399,10 +364,6 @@
   animation: ghostDisappear var(--duration-slower) var(--ease-in) forwards;
 }
 
-/* ========================================
-   DELAYS
-   ======================================== */
-
 .delay-100 { animation-delay: 100ms; }
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
@@ -410,10 +371,6 @@
 .delay-500 { animation-delay: 500ms; }
 .delay-700 { animation-delay: 700ms; }
 .delay-1000 { animation-delay: 1000ms; }
-
-/* ========================================
-   HOVER EFFECTS
-   ======================================== */
 
 .hover-lift {
   transition: transform var(--duration-normal) var(--ease-out);
@@ -447,10 +404,6 @@
   box-shadow: var(--shadow-gold);
 }
 
-/* ========================================
-   TRANSITION UTILITIES
-   ======================================== */
-
 .transition-all {
   transition: all var(--duration-normal) var(--ease-in-out);
 }
@@ -468,10 +421,6 @@
 .transition-opacity {
   transition: opacity var(--duration-normal) var(--ease-in-out);
 }
-
-/* ========================================
-   PAGE TRANSITIONS
-   ======================================== */
 
 .page-enter {
   opacity: 0;
@@ -497,11 +446,6 @@
               transform var(--duration-slow) var(--ease-in);
 }
 
-/* ========================================
-   PERFORMANCE
-   ======================================== */
-
-/* Will-change para animações pesadas */
 .will-change-transform {
   will-change: transform;
 }
@@ -514,7 +458,6 @@
   will-change: auto;
 }
 
-/* GPU acceleration */
 .gpu-accelerate {
   transform: translateZ(0);
   backface-visibility: hidden;

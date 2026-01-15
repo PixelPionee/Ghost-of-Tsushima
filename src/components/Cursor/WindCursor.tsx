@@ -63,14 +63,13 @@ export function WindCursor({
 
   return (
     <>
-      {/* Canvas para partículas */}
+
       <canvas
         ref={canvasRef}
         className="wind-cursor-canvas"
         aria-hidden="true"
       />
 
-      {/* Cursor customizado */}
       {showCursor && (
         <div
           ref={cursorRef}

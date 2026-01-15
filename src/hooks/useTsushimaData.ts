@@ -9,9 +9,6 @@ interface UseTsushimaDataReturn {
   refetch: () => Promise<void>;
 }
 
-/**
- * Hook para buscar e gerenciar os dados de Tsushima
- */
 export const useTsushimaData = (): UseTsushimaDataReturn => {
   const [data, setData] = useState<TsushimaData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);

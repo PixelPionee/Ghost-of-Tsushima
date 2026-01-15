@@ -45,7 +45,6 @@ export function useWindCursor({
     const speed = calculateMouseSpeed(mouseRef.current);
     isMovingRef.current = speed > 0.5;
 
-    // Criar partículas baseado no movimento
     if (enabled) {
       spawnParticles(mouseRef.current, speed);
     }
@@ -61,8 +60,6 @@ export function useWindCursor({
     const now = Date.now();
     const deltaTime = now - lastTimeRef.current;
     lastTimeRef.current = now;
-
-    // SEM spawn automático - apenas quando mouse se move
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -90,7 +87,7 @@ export function useWindCursor({
   }, [canvasRef]);
 
   const throttledMouseMove = useCallback(
-    throttle(updateMousePosition, 50), // Spawn a cada 50ms = mais frequente
+    throttle(updateMousePosition, 50), 
     [updateMousePosition]
   );
 

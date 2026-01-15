@@ -8,10 +8,6 @@ interface InkButtonProps {
   size?: 'small' | 'medium' | 'large';
 }
 
-/**
- * Botão com efeito de pincelada de tinta japonesa (Sumi-e)
- * Inspirado no menu de Ghost of Tsushima
- */
 export function InkButton({ 
   children, 
   onClick,
@@ -27,7 +23,6 @@ export function InkButton({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Fundo de tinta (aparece no hover) */}
       <span className="ink-button__background" aria-hidden="true" />
       
       {/* Texto do botão */}

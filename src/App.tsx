@@ -7,13 +7,12 @@ import './styles/animations.css';
 function App() {
   return (
     <SectionProvider>
-      {/* Cursor de Vento - Reage ao contexto da seção */}
+
       <WindCursor 
         enabled={true}
         showCursor={false}
       />
 
-      {/* Página Principal One-Page Scroll */}
       <MainPage />
     </SectionProvider>
   );

@@ -11,12 +11,10 @@ export function MainPage() {
   const storyRef = useRef<HTMLElement>(null);
   const stancesRef = useRef<HTMLElement>(null);
 
-  // Scroll suave para seções
   const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // Intersection Observer para detectar seção visível
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
 
@@ -62,7 +60,6 @@ export function MainPage() {
 
   return (
     <div className="main-page">
-      {/* Navegação Fixa */}
       <nav className="main-nav">
         <button onClick={() => scrollToSection(charactersRef)} className="main-nav__link">
           PERSONAGENS
@@ -75,7 +72,6 @@ export function MainPage() {
         </button>
       </nav>
 
-      {/* Seção: Personagens */}
       <section ref={charactersRef} className="section section--characters" id="personagens">
         <h2 className="section__title">Personagens</h2>
         
@@ -91,7 +87,6 @@ export function MainPage() {
         </div>
       </section>
 
-      {/* Seção: História (com Duelo de Ryuzo) */}
       <section ref={storyRef} className="section section--story" id="historia">
         <h2 className="section__title">História</h2>
         
@@ -113,7 +108,6 @@ export function MainPage() {
                 </blockquote>
               )}
               
-              {/* Imagem do Duelo de Ryuzo */}
               {chapter.hasImage && chapter.imagePath && (
                 <div className="story-chapter__image-container">
                   <div className="story-chapter__image" style={{
@@ -130,7 +124,6 @@ export function MainPage() {
         </div>
       </section>
 
-      {/* Seção: Posturas */}
       <section ref={stancesRef} className="section section--stances" id="posturas">
         <h2 className="section__title">Posturas</h2>
         
@@ -150,7 +143,6 @@ export function MainPage() {
         </div>
       </section>
 
-      {/* Rodapé */}
       <footer className="main-footer">
         <p>Desenvolvido por Caio LighSpeed</p>
       </footer>

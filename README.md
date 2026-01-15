@@ -1,5 +1,13 @@
 Ghost of Tsushima - Interactive Tribute
 
+## TL;DR
+• Projeto experimental focado em UX avançado  
+• Cursor customizado com partículas físicas (Canvas)  
+• Performance otimizada (60fps)  
+• Projeto autoral, não tutorial  
+• Desktop-first
+
+
 > *"Como o vento que guia Jin Sakai, este cursor guia sua experiência."*
 
 ![React](https://img.shields.io/badge/React-18.2-61DAFB?style=flat&logo=react)
@@ -250,7 +258,7 @@ Conclusão
 
 Este não é apenas um projeto de portfólio. É uma **declaração**:
 
-> *"Eu não faço sites. Eu crio experiências."*
+> *"Meu foco é ir além de interfaces funcionais"*
 
 Se você chegou até aqui, obrigado pelo seu tempo. Espero que tenha valido a pena. 🌸
 
