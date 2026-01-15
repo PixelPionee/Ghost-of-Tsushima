@@ -1,0 +1,212 @@
+/* ========================================
+   HOME PAGE - Estilo Sumi-e Minimalista
+   ======================================== */
+
+.home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+/* ========================================
+   FUNDO SUMI-E (Pinceladas de Tinta)
+   ======================================== */
+
+.home__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  
+  /* Base: Cinza carvão profundo e preto */
+  background: 
+    radial-gradient(ellipse at 20% 30%, #1a1a1a 0%, #0a0a0a 50%),
+    radial-gradient(ellipse at 80% 70%, #252525 0%, #0a0a0a 50%),
+    #0a0a0a;
+  
+  /* Pinceladas de tinta branca/cinza (Sumi-e) */
+  background-image: 
+    /* Pincelada superior esquerda */
+    radial-gradient(
+      ellipse 800px 400px at 10% 20%,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(200, 200, 200, 0.02) 30%,
+      transparent 70%
+    ),
+    /* Pincelada inferior direita */
+    radial-gradient(
+      ellipse 600px 500px at 90% 80%,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(180, 180, 180, 0.02) 40%,
+      transparent 70%
+    ),
+    /* Pincelada central */
+    radial-gradient(
+      ellipse 1000px 300px at 50% 50%,
+      rgba(255, 255, 255, 0.02) 0%,
+      transparent 60%
+    );
+  
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+   ======================================== */
+
+.home__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: var(--space-8);
+  max-width: 900px;
+  width: 100%;
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   TÍTULO PRINCIPAL
+   ======================================== */
+
+.home__title {
+  font-family: 'Noto Serif JP', 'Shippori Mincho', serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: var(--space-8);
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap; /* Força tudo em uma linha */
+}
+
+.home__title-ghost,
+.home__title-of,
+.home__title-tsushima {
+  display: inline;
+}
+
+.home__title-of {
+  font-size: 0.5em;
+  font-weight: 300;
+  margin: 0 0.3em;
+  opacity: 0.8;
+}
+
+/* ========================================
+   SUBTÍTULO
+   ======================================== */
+
+.home__subtitle {
+  font-family: 'Noto Serif JP', 'Shippori Mincho', serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #FFFFFF;
+  margin-bottom: var(--space-20);
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  opacity: 0.85;
+}
+
+/* ========================================
+   CALL TO ACTION (Botão)
+   ======================================== */
+
+.home__cta {
+  position: relative;
+  display: inline-block;
+}
+
+/* Pincelada Enso atrás do botão */
+.home__cta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    transparent 45%,
+    rgba(255, 255, 255, 0.08) 45%,
+    rgba(255, 255, 255, 0.08) 55%,
+    transparent 55%
+  );
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* ========================================
+   CITAÇÃO (Removida para minimalismo)
+   ======================================== */
+
+.home__quote {
+  display: none;
+}
+
+/* ========================================
+   DECORAÇÕES (Removidas)
+   ======================================== */
+
+.home__decorations {
+  display: none;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .home__content {
+    padding: var(--space-4);
+  }
+  
+  .home__title {
+    margin-bottom: var(--space-6);
+  }
+  
+  .home__subtitle {
+    margin-bottom: var(--space-12);
+  }
+  
+  .home__cta::before {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ========================================
+   ACESSIBILIDADE
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .home__content {
+    animation: none !important;
+  }
+}
+
+/* ========================================
+   PERFORMANCE
+   ======================================== */
+
+.home__background {
+  will-change: auto;
+  backface-visibility: hidden;
+}

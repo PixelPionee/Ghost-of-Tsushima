@@ -1,0 +1,157 @@
+{
+  "story": {
+    "title": "A Jornada do Fantasma",
+    "chapters": [
+      {
+        "id": "invasion",
+        "title": "A Invasão",
+        "content": "A ilha de Tsushima queima sob a invasão Mongol. O código samurai falha, resultando no massacre da Praia de Komoda. Jin Sakai sobrevive, mas percebe que para vencer um monstro, ele precisa se tornar algo que seu tio jamais aprovaria.",
+        "cursorEffect": null
+      },
+      {
+        "id": "ryuzo-duel",
+        "title": "O Duelo sob a Chuva",
+        "subtitle": "Jin vs Ryuzo",
+        "quote": "Amigos de infância, separados pela guerra.",
+        "content": "Ryuzo, líder dos Chapéus de Palha, não traiu Jin por maldade, mas por fome e desespero para alimentar seus homens. O confronto final não é apenas uma luta de espadas, é o colapso da inocência de Jin. Sob a chuva torrencial e a luz fraca de lanternas, Jin é forçado a matar seu velho amigo, selando seu destino como o Fantasma e aceitando que a honra não pode salvar a todos.",
+        "isClimax": true,
+        "hasImage": true,
+        "imagePath": "/images/Duelo%20com%20o%20Ryuzo.jpeg",
+        "cursorEffect": {
+          "particleColor": "blood-red",
+          "particleSpeed": "medium",
+          "particleSize": "medium",
+          "particleFrequency": "high",
+          "intensity": "high",
+          "emotion": "tragedy"
+        }
+      },
+      {
+        "id": "transformation",
+        "title": "O Nascimento do Fantasma",
+        "content": "Jin abandona completamente o código samurai. Ele se torna uma lenda sussurrada pelos mongóis — o Fantasma de Tsushima. Mas cada vitória nas sombras o afasta mais de seu tio e dos valores que um dia definiam quem ele era.",
+        "cursorEffect": null
+      },
+      {
+        "id": "final-choice",
+        "title": "A Escolha Final",
+        "content": "No confronto final com Khotun Khan, Jin vence. Mas a verdadeira batalha é contra Lord Shimura, que não pode aceitar o que Jin se tornou. O jogo termina com uma escolha impossível: honrar o pedido de seu tio ou poupar sua vida, sabendo que isso o tornará um traidor aos olhos de todos.",
+        "cursorEffect": null
+      }
+    ],
+    "keyLocations": [
+      "Praia de Komoda - onde tudo começou",
+      "Castelo Kaneda - a fortaleza mongol",
+      "Templo da Luz Dourada - refúgio dos deslocados",
+      "Castelo Shimura - o confronto final"
+    ]
+  },
+  "characters": [
+    {
+      "id": "jin-sakai",
+      "name": "Jin Sakai",
+      "title": "O Fantasma",
+      "essence": "O conflito entre dever e identidade",
+      "description": "Último sobrevivente do clã Sakai. Abandona o código samurai para se tornar o Fantasma — um guerreiro das sombras que luta pela sobrevivência de Tsushima.",
+      "conflict": "Honra vs. Sobrevivência"
+    },
+    {
+      "id": "lord-shimura",
+      "name": "Lord Shimura",
+      "title": "Jito de Tsushima",
+      "essence": "A personificação da tradição e da honra",
+      "description": "Tio e mentor de Jin. Representa o passado e os valores samurais tradicionais. Seu conflito com Jin define o coração emocional da história.",
+      "conflict": "Tradição vs. Mudança"
+    },
+    {
+      "id": "yuna",
+      "name": "Yuna",
+      "title": "A Ladra",
+      "essence": "O pilar de sobrevivência e o nascimento do Fantasma",
+      "description": "Ladra pragmática que resgata Jin e o ensina a lutar nas sombras. Ela é o catalisador da transformação de Jin em Fantasma.",
+      "conflict": "Sobrevivência vs. Moralidade"
+    },
+    {
+      "id": "khotun-khan",
+      "name": "Khotun Khan",
+      "title": "O Conquistador",
+      "essence": "O catalisador externo",
+      "description": "Líder implacável da invasão mongol. Estrategista brilhante que usa táticas psicológicas para quebrar seus inimigos. Ele força Jin a se tornar algo além de um samurai.",
+      "conflict": "Conquista vs. Resistência"
+    }
+  ],
+  "stances": [
+    {
+      "id": "stone-stance",
+      "name": "Pedra",
+      "kanji": "石",
+      "essence": "Força Inabalável",
+      "description": "Golpes pesados e diretos. Como uma rocha que não se move.",
+      "rhythm": "Lento e poderoso",
+      "cursorEffect": {
+        "particleSpeed": "slow",
+        "particleSize": "large",
+        "particleFrequency": "low",
+        "color": "gray-stone"
+      },
+      "philosophy": "A força bruta supera a técnica"
+    },
+    {
+      "id": "water-stance",
+      "name": "Água",
+      "kanji": "水",
+      "essence": "Fluidez Adaptável",
+      "description": "Movimentos fluidos que contornam defesas. Como água que encontra seu caminho.",
+      "rhythm": "Fluido e contínuo",
+      "cursorEffect": {
+        "particleSpeed": "medium",
+        "particleSize": "medium",
+        "particleFrequency": "medium",
+        "color": "blue-water",
+        "flow": "wave-like"
+      },
+      "philosophy": "Adapte-se ao oponente"
+    },
+    {
+      "id": "wind-stance",
+      "name": "Vento",
+      "kanji": "風",
+      "essence": "Velocidade Cortante",
+      "description": "Ataques rápidos e precisos. Como o vento que corta sem ser visto.",
+      "rhythm": "Rápido e ágil",
+      "cursorEffect": {
+        "particleSpeed": "fast",
+        "particleSize": "small",
+        "particleFrequency": "high",
+        "color": "white-wind",
+        "movement": "swirling"
+      },
+      "philosophy": "A velocidade é a melhor defesa"
+    },
+    {
+      "id": "moon-stance",
+      "name": "Lua",
+      "kanji": "月",
+      "essence": "Precisão Mortal",
+      "description": "Golpes calculados e letais. Como a lua que ilumina o caminho da morte.",
+      "rhythm": "Preciso e deliberado",
+      "cursorEffect": {
+        "particleSpeed": "variable",
+        "particleSize": "medium",
+        "particleFrequency": "rhythmic",
+        "color": "silver-moon",
+        "pattern": "circular"
+      },
+      "philosophy": "Um golpe, uma morte"
+    }
+  ],
+  "themes": {
+    "primary": "Identidade e Transformação",
+    "secondary": [
+      "Honra vs. Pragmatismo",
+      "Tradição vs. Sobrevivência",
+      "O custo da guerra",
+      "Sacrifício pessoal"
+    ]
+  }
+}
