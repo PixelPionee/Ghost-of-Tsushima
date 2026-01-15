@@ -34,7 +34,6 @@ export function useWindCursor({
   const isMovingRef = useRef(false);
   const animationFrameRef = useRef<number>();
   const lastTimeRef = useRef<number>(Date.now());
-  const lastConstantSpawnRef = useRef<number>(Date.now());
 
   const updateMousePosition = useCallback((e: MouseEvent) => {
     mouseRef.current.prevX = mouseRef.current.x;

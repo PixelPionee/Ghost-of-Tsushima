@@ -16,7 +16,7 @@ export function WindCursor({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const cursorRef = useRef<HTMLDivElement>(null);
   
-  const { mousePosition, isMoving } = useWindCursor({
+  const { isMoving } = useWindCursor({
     enabled,
     canvasRef,
   });
