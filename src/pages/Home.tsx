@@ -1,9 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import { InkButton } from '../components/UI';
 import './Home.css';
 
 export function Home() {
+  const navigate = useNavigate();
+
   const handleEnter = () => {
-    console.log('Entrando no site...');
+    navigate('/main');
   };
 
   return (

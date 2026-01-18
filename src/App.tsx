@@ -1,20 +1,26 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { WindCursor } from './components/Cursor';
 import { SectionProvider } from './contexts/SectionContext';
+import { Home } from './pages/Home';
 import { MainPage } from './pages/MainPage';
 import './styles/global.css';
 import './styles/animations.css';
 
 function App() {
   return (
-    <SectionProvider>
+    <BrowserRouter basename="/Ghost-of-Tsushima">
+      <SectionProvider>
+        <WindCursor 
+          enabled={true}
+          showCursor={false}
+        />
 
-      <WindCursor 
-        enabled={true}
-        showCursor={false}
-      />
-
-      <MainPage />
-    </SectionProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/main" element={<MainPage />} />
+        </Routes>
+      </SectionProvider>
+    </BrowserRouter>
   );
 }
 
