@@ -8,7 +8,10 @@ export const fetchTsushimaData = async (): Promise<TsushimaData> => {
   }
 
   try {
-    const response = await fetch(`${import.meta.env.BASE_URL}api/tsushima-data.json`);
+    const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
+      ? import.meta.env.BASE_URL 
+      : `${import.meta.env.BASE_URL}/`;
+    const response = await fetch(`${baseUrl}api/tsushima-data.json`);
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);

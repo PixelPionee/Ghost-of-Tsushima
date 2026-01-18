@@ -50,10 +50,22 @@ export function MainPage() {
     };
   }, [data, setSection, resetSection]);
 
-  if (loading || !data) {
+  if (loading) {
     return (
       <div className="main-page__loading">
         <p>Carregando...</p>
+      </div>
+    );
+  }
+
+  if (!data) {
+    return (
+      <div className="main-page__error">
+        <h2>Erro ao carregar dados</h2>
+        <p>Não foi possível carregar os dados do jogo. Por favor, tente novamente mais tarde.</p>
+        <p style={{ fontSize: '0.8rem', opacity: 0.7, marginTop: '1rem' }}>
+          Verifique o console do navegador para mais detalhes.
+        </p>
       </div>
     );
   }
