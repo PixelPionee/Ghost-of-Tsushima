@@ -8,10 +8,15 @@ export const fetchTsushimaData = async (): Promise<TsushimaData> => {
   }
 
   try {
-    const baseUrl = import.meta.env.BASE_URL.endsWith('/') 
-      ? import.meta.env.BASE_URL 
-      : `${import.meta.env.BASE_URL}/`;
-    const response = await fetch(`${baseUrl}api/tsushima-data.json`);
+    // Get base URL from Vite env or fallback to current path
+    const baseUrl = import.meta.env.BASE_URL || '/Ghost-of-Tsushima/';
+    const normalizedBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+    const apiUrl = `${normalizedBase}api/tsushima-data.json`;
+    
+    console.log('🔍 Fetching API from:', apiUrl);
+    console.log('📍 BASE_URL:', import.meta.env.BASE_URL);
+    
+    const response = await fetch(apiUrl);
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
