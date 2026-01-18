@@ -42,18 +42,18 @@ Enquanto a maioria dos sites trata o cursor como invisível, aqui ele é **vento
 Vale a pena seu tempo aqui?
 
 **Se você é recrutador/tech lead:** Sim. Este projeto mostra:
-- ✅ Domínio de Canvas API e física de partículas
-- ✅ Performance otimizada (60fps com 100+ partículas)
-- ✅ TypeScript profissional com tipos completos
-- ✅ Arquitetura limpa e escalável
-- ✅ Atenção obsessiva aos detalhes visuais
+- Domínio de Canvas API e física de partículas
+- Performance otimizada (60fps com 100+ partículas)
+- TypeScript profissional com tipos completos
+- Arquitetura limpa e escalável
+- Atenção obsessiva aos detalhes visuais
 
 **Se você é desenvolvedor:** Sim. Você vai ver:
-- 🎨 Como criar cursores customizados com física realista
-- 🌬️ Sistema de partículas otimizado com object pooling
-- 🎭 Cores dinâmicas por seção (Context API)
-- 📜 Layout one-page scroll minimalista
-- ⚡ Técnicas de otimização para 60fps constante
+- Como criar cursores customizados com física realista
+- Sistema de partículas otimizado com object pooling
+- Cores dinâmicas por seção (Context API)
+- Layout one-page scroll minimalista
+- Técnicas de otimização para 60fps constante
 
 **Se você só quer ver algo bonito:** Definitivamente sim. 
 
@@ -133,7 +133,7 @@ Sacrifícios e Decisões de Design
 2. **Ícones Geométricos nas Posturas**
    - ❌ Planejado: Ícones customizados (losango, ondas, triângulo, lua)
    - ✅ Implementado: Apenas kanji + texto
-   - **Por quê:** Feedback do usuário — "não ficou agradável". Minimalismo venceu.
+   - **Por quê:** não ficou agradável
 
 3. **Galeria Completa de Imagens**
    - ❌ Planejado: 30-50 screenshots com lightbox
@@ -148,16 +148,16 @@ Sacrifícios e Decisões de Design
 ### **Problemas Resolvidos:**
 
 1. **Performance com Muitas Partículas**
-   - 🐛 Problema: FPS caindo com 200+ partículas
-   - ✅ Solução: Object pooling + limite de 100 partículas + throttle 16ms
+   - Problema: FPS caindo com 200+ partículas
+   - Solução: Object pooling + limite de 100 partículas + throttle 16ms
 
 2. **Imagem Não Carregando**
-   - 🐛 Problema: Espaços no nome do arquivo (`Duelo com o Ryuzo.jpeg`)
-   - ✅ Solução: URL encoding (`Duelo%20com%20o%20Ryuzo.jpeg`)
+   - Problema: Espaços no nome do arquivo (`Duelo com o Ryuzo.jpeg`)
+   - Solução: URL encoding (`Duelo%20com%20o%20Ryuzo.jpeg`)
 
 3. **Cursor Causando Mudanças Acidentais**
-   - 🐛 Problema: Ideia inicial era "mover mouse = mudar página"
-   - ✅ Solução: Cursor é APENAS visual. Navegação por click.
+   - Problema: Ideia inicial era "mover mouse = mudar página"
+   - Solução: Cursor é APENAS visual. Navegação por click.
 
 ---
 
@@ -272,7 +272,7 @@ Contato
 
 ---
 
-## 📄 Licença
+## Licença
 
 MIT License - Sinta-se livre para usar, modificar e aprender com este código.
 
